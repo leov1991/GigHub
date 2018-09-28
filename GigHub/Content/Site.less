@@ -1,0 +1,261 @@
+﻿// Color variables (appears count calculates by raw css)
+@color0: #ff4342; // Appears 2 times
+@color1: #ffffff; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@width0: 280px; // Appears 3 times
+@width1: 60px; // Appears 1 time
+
+// Height variables (appears count calculates by raw css)
+@height0: 44px; // Appears 1 time
+
+body {
+    font-size: 17px;
+    padding-bottom: 20px;
+    padding-top: 90px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal {
+    dt {
+        white-space: normal;
+    }
+}
+
+input {
+    max-width: @width0;
+}
+
+select {
+    max-width: @width0;
+}
+
+textarea {
+    max-width: @width0;
+}
+
+span {
+    .field-validation-error {
+        color: red;
+        font-weight: bold;
+    }
+}
+
+.voffset {
+    margin-top: 2px;
+}
+
+.voffset1 {
+    margin-top: 5px;
+}
+
+.voffset2 {
+    margin-top: 10px;
+}
+
+.voffset3 {
+    margin-top: 20px;
+}
+
+.voffset4 {
+    margin-top: 40px;
+}
+
+.voffset5 {
+    margin-top: 80px;
+}
+
+.navbar-inverse {
+    background-color: @color0;
+    border-color: @color0;
+
+    .navbar-nav > li > a {
+        color: @color1;
+    }
+
+    .navbar-brand {
+        color: @color1;
+    }
+
+    .navbar-nav > .open > a {
+        background-color: rgba(205, 40, 39, 0.55);
+
+        &:hover {
+            background-color: rgba(205, 40, 39, 0.55);
+        }
+
+        &:focus {
+            background-color: rgba(205, 40, 39, 0.55);
+        }
+    }
+
+    .notifications {
+        position: relative;
+
+        .badge {
+            background: #a80a0a;
+            position: absolute;
+            right: -1px;
+            top: 8px;
+        }
+    }
+}
+
+.dropdown-menu {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-group:focus {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control {
+    -ms-border-radius: 9px;
+    border-radius: 9px;
+    font-size: 17px;
+    height: @height0;
+
+    &:focus {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        border-color: #2196f3;
+        box-shadow: none;
+    }
+}
+
+.btn {
+    border-radius: 9px;
+}
+
+.popover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('fonts/glyphicons-halflings-regular.eot');
+    src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.gigs {
+    list-style: none;
+}
+
+.gigs > li {
+    margin-bottom: 30px;
+    position: relative;
+
+    .date {
+        background: red;
+        border-radius: 8px;
+        color: white;
+        text-align: center;
+        width: @width1;
+
+        .month {
+            font-size: 14px;
+            font-weight: bold;
+            padding: 2px 6px;
+            text-transform: uppercase;
+        }
+
+        .day {
+            background: #f7f7f7;
+            color: #333333;
+            font-size: 20px;
+            padding: 6px 20px;
+        }
+    }
+
+    .details {
+        left: 70px;
+        position: absolute;
+        top: 0;
+
+        .artist {
+            display: block;
+            font-weight: bold;
+        }
+
+        .genre {
+            font-size: 12px;
+            display: block;
+            margin-bottom: 4px;
+        }
+    }
+
+    .actions {
+        display: none;
+        font-size: 12px;
+    }
+
+    &:hover {
+        .actions {
+            display: block;
+        }
+    }
+}
+
+.popover-notifications {
+    .popover-content {
+        padding: 0;
+    }
+
+    ul.notifications {
+        list-style: none;
+        padding-left: 0;
+
+        .highlight {
+            font-weight: bold;
+        }
+
+        .highlight-old {
+            font-style: italic;
+            color: red;
+        }
+
+        .highlight-new {
+            font-style: italic;
+            color: green;
+        }
+
+        .highlight-name {
+            color: #428bca;
+            font-weight: bold;
+        }
+    }
+
+    ul.notifications > li {
+        border-bottom: 1px solid #dddddd;
+        padding: 10px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+#searchGigs {
+    width: 300px;
+}

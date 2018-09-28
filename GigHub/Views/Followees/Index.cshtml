@@ -1,0 +1,12 @@
+﻿@model IEnumerable<GigHub.Core.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Siguiendo</h1>
+<ul class="voffset4">
+    @foreach (var artist in Model)
+    {
+        <li>@artist.Name</li>
+    }
+</ul>
